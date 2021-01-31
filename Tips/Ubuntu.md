@@ -34,3 +34,50 @@ listen-address 127.0.0.1:8811
 ```bash
 sudo apt-get -o Acquire::http::proxy="http://127.0.0.1:8811/" install <xxx>
 ```
+
+## 0x002 软件
+
+### 尝试使用 fcitx5
+
+使用 ppa
+
+```bash
+sudo add-apt-repository ppa:hosxy/fcitx5
+```
+
+```bash
+sudo apt install fcitx5 fcitx5-pinyin
+```
+
+Ubuntu 20.04 KDE 环境下 fcitx5-configtool 缺少组件无法使用，请在 fcitx5 未启动状态下手动配置，不然会被覆盖。
+
+```bash
+vi ~/.config/fcitx5/profile
+
+[Groups/0]
+# Group Name
+Name=Default
+# Layout
+Default Layout=us
+# Default Input Method
+DefaultIM=pinyin
+
+[Groups/0/Items/0]
+# Name
+Name=keyboard-us
+# Layout
+Layout=
+
+[Groups/0/Items/1]
+# Name
+Name=pinyin
+# Layout
+Layout=
+
+[GroupOrder]
+0=Default
+
+```
+
+<kbd>CTRL</kbd>-<kbd>SPECE</kbd> 切换输入法。
+
