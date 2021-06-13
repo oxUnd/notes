@@ -35,9 +35,9 @@ listen-address 127.0.0.1:8811
 sudo apt-get -o Acquire::http::proxy="http://127.0.0.1:8811/" install <xxx>
 ```
 
-## 0x002 软件
+# 0x002 软件
 
-### 尝试使用 fcitx5
+## 尝试使用 fcitx5
 
 使用 ppa
 
@@ -80,4 +80,20 @@ Layout=
 ```
 
 <kbd>CTRL</kbd>-<kbd>SPECE</kbd> 切换输入法。
+
+# 开发
+
+## 动态链接库找不到
+
+在 64 位机器上，有时候需要 32 位的 `.so` 动态链接库，这时候需要安装它们，我们可以尝试安装 `lib32*`
+
+比如你缺的是 `libz.so.1`
+
+执行以下命令安装它即可。
+
+```
+# apt install lib32z1 lib32z1-dev
+```
+
+
 
