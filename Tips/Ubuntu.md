@@ -81,7 +81,7 @@ Layout=
 
 <kbd>CTRL</kbd>-<kbd>SPECE</kbd> 切换输入法。
 
-# 开发
+# 0x003 开发
 
 ## 动态链接库找不到
 
